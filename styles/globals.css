@@ -1,0 +1,123 @@
+:root {
+  /* Brasa Brand Colors */
+  --brasa-primary: #fc502c;
+  --brasa-secondary: #0b0b0c;
+  --brasa-beige: #f5f1ed;
+  --brasa-off-white: #faf8f6;
+
+  /* Accent variations */
+  --brasa-primary-light: #fd7355;
+  --brasa-primary-dark: #e03f1e;
+
+  /* Semantic colors */
+  --brasa-success: #10b981;
+  --brasa-warning: #f59e0b;
+  --brasa-danger: #ef4444;
+  --brasa-info: #3b82f6;
+}
+
+/* Custom font loading - Inter */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-semibold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-bold.woff2') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Code block styling */
+pre {
+  border-radius: 8px !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.dark pre {
+  border-color: #374151 !important;
+}
+
+/* Link styling */
+a {
+  color: var(--brasa-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--brasa-primary);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--brasa-primary);
+  color: white;
+}

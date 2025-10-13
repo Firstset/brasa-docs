@@ -1,0 +1,244 @@
+---
+title: FAQ
+description: Frequently asked questions about Brasa LST
+---
+
+# Frequently Asked Questions
+
+Common questions about Brasa liquid staking protocol.
+
+## General Questions
+
+### What is Brasa?
+
+Brasa is a liquid staking protocol on Fogo that allows you to stake tokens while
+maintaining liquidity. You receive brsToken (Brasa's LST) that represents your
+staked position and can be used across DeFi.
+
+### How does liquid staking work?
+
+When you stake tokens through Brasa:
+
+1. Your tokens are delegated to validators
+2. You receive brsToken representing your position
+3. Staking rewards automatically accrue to brsToken value
+4. You can use, trade, or hold brsToken
+5. Redeem brsToken anytime to get your tokens back
+
+### Is Brasa safe?
+
+Brasa implements multiple security measures:
+
+- Comprehensive security audits by top firms
+- Multi-signature governance with timelock
+- Battle-tested smart contracts
+- Emergency pause mechanisms
+- Transparent on-chain operations
+
+See [Security](/security/audits) for details.
+
+## Staking Questions
+
+### What are the minimum and maximum stake amounts?
+
+- **Minimum**: 0.1 tokens (to cover gas costs)
+- **Maximum**: No upper limit
+
+### How long does staking take?
+
+Staking is immediate. Once your transaction confirms, you receive brsToken and
+start earning rewards.
+
+### Can I unstake anytime?
+
+Yes, unstaking is permissionless and typically instant, subject to liquidity
+availability.
+
+### Is there an unstaking period?
+
+No lock-up period. However, during high demand, you may need to wait for
+liquidity to be available. Most unstakes are instant.
+
+## Rewards Questions
+
+### How much can I earn?
+
+Rewards vary based on:
+
+- Base validator rewards (typically 4-8% APR)
+- MEV rewards (typically 0.5-2% additional)
+- Network conditions
+
+Current rates are shown on [app.brasa.finance](https://app.brasa.finance).
+
+### How are rewards distributed?
+
+Rewards accrue automatically through the exchange rate mechanism. The value of
+brsToken increases relative to the base token over time.
+
+You don't need to claim or compound—rewards are built into your brsToken
+balance.
+
+### What are MEV rewards?
+
+MEV (Maximal Extractable Value) rewards come from optimal block production by
+validators. Brasa validators share these rewards with stakers.
+
+Learn more in [LST Economics](/concepts/lst-economics).
+
+## brsToken Questions
+
+### What is brsToken?
+
+brsToken is Brasa's liquid staking token. It represents your staked position
+plus accrued rewards.
+
+### How does brsToken value work?
+
+brsToken is a rebasing token where:
+
+- Initial rate: 1 brsToken = 1 token
+- Value increases as rewards accrue
+- Exchange rate reflects total rewards earned
+
+Example: If you stake 100 tokens today and the protocol earns 10% over a year,
+your 100 brsToken will be redeemable for 110 tokens.
+
+### Where can I use brsToken?
+
+brsToken is composable across Fogo DeFi:
+
+- DEXs and AMMs for trading
+- Lending platforms as collateral
+- Liquidity pools for additional yield
+- Any DeFi protocol that accepts ERC-20 tokens
+
+### Can I transfer brsToken?
+
+Yes, brsToken is a standard token and fully transferable.
+
+## Fees Questions
+
+### What fees does Brasa charge?
+
+Brasa has a transparent fee structure:
+
+- **Protocol Fee**: 10% of staking rewards
+- **No** deposit fees
+- **No** withdrawal fees
+- **No** performance fees
+
+See [LST Economics](/concepts/lst-economics) for breakdown.
+
+### Where do fees go?
+
+Protocol fees are used for:
+
+- Protocol development and maintenance
+- Security audits and monitoring
+- Community incentives
+- DAO treasury
+
+## Technical Questions
+
+### Which wallets support Brasa?
+
+All Fogo-compatible wallets:
+
+- MetaMask
+- WalletConnect-compatible wallets
+- Coinbase Wallet
+- Hardware wallets (Ledger, Trezor)
+
+See [Wallet Integration](/integrate/wallets).
+
+### Which networks is Brasa on?
+
+Currently, Brasa operates on Fogo mainnet. Future expansions may include other
+networks.
+
+### Can I integrate Brasa into my app?
+
+Yes! We provide:
+
+- JavaScript/TypeScript SDK
+- Smart contract interfaces
+- REST APIs
+- GraphQL endpoints
+
+See [Integration Guide](/integrate/sdk).
+
+### Is the code open source?
+
+Yes, all smart contracts are verified and open source. View them on the Fogo
+explorer or our [GitHub](https://github.com/brasa-finance).
+
+## Risk Questions
+
+### What are the risks?
+
+Key risks include:
+
+- **Smart Contract Risk**: Bugs or vulnerabilities in code
+- **Validator Risk**: Slashing or poor performance
+- **Liquidity Risk**: Delays during high unstake demand
+- **Market Risk**: Token price volatility
+
+See [Risks and Disclosures](/concepts/risks-and-disclosures) for detailed
+discussion.
+
+### What is slashing?
+
+Slashing is a penalty applied to validators for malicious behavior or extended
+downtime. Brasa mitigates this by:
+
+- Carefully selecting validators
+- Diversifying across multiple validators
+- Monitoring performance continuously
+
+### Is brsToken price stable?
+
+brsToken value should equal or exceed the base token value (due to rewards).
+However, market trading prices may fluctuate based on supply/demand.
+
+### What if the protocol gets hacked?
+
+Brasa has multiple safeguards:
+
+- Multi-signature controls
+- Time-locks on critical operations
+- Emergency pause functionality
+- Insurance considerations (under evaluation)
+
+## Validator Questions
+
+### How do I become a Brasa validator?
+
+See [Validator Requirements](/validators/requirements) for detailed criteria and
+application process.
+
+### How are validators selected?
+
+Validators are selected based on:
+
+- Performance history
+- Infrastructure quality
+- Commission rates
+- Alignment with protocol goals
+
+See [Validator Operations](/validators/operations).
+
+### What is the validator commission?
+
+Commission rates vary by validator but are transparently published. Brasa
+targets a blended rate of 5-10%.
+
+## Support
+
+### Still have questions?
+
+- **Email**: [support@brasa.finance](mailto:support@brasa.finance)
+- **Discord**: [Join our community](https://discord.gg/brasa)
+- **GitHub**:
+  [Report issues](https://github.com/brasa-finance/brasa-docs/issues)
+- **Twitter**: [@brasafinance](https://twitter.com/brasafinance)

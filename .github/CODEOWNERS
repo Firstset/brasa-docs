@@ -1,0 +1,16 @@
+# Code owners for Brasa Docs
+# These owners will be automatically requested for review when PRs are opened
+
+# Default owners for everything in the repo
+* @brasa-finance/docs-team
+
+# Documentation content
+/pages/** @brasa-finance/docs-team
+
+# Components and theme
+/components/** @brasa-finance/engineering
+/theme.config.tsx @brasa-finance/engineering
+
+# CI/CD and tooling
+/.github/** @brasa-finance/engineering
+/.husky/** @brasa-finance/engineering
