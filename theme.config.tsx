@@ -69,7 +69,6 @@ const config: DocsThemeConfig = {
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <meta name="theme-color" content="#FC502C" />
-        <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </>
