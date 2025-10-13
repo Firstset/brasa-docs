@@ -5,29 +5,16 @@ import { Callout, Tabs, Tab, Badge, Steps, Step, ContractAddress } from './compo
 
 const Logo = () => (
   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-    <svg
-      width="28"
-      height="28"
-      viewBox="0 0 40 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect width="40" height="40" rx="8" fill="#FC502C" />
-      <path
-        d="M12 28V12h8c3.5 0 6 2 6 5.5 0 2-1 3.5-2.5 4.5 1.8.8 3 2.5 3 4.5 0 3.5-2.5 5.5-6 5.5H12zm4-14v4h4c1.5 0 2.5-.8 2.5-2s-1-2-2.5-2h-4zm0 7v5h4.5c1.8 0 3-1 3-2.5s-1.2-2.5-3-2.5H16z"
-        fill="white"
-      />
-    </svg>
-    <span style={{ fontWeight: 700, fontSize: '18px' }}>Brasa</span>
+    <img src="/Logo-md-orange.svg" alt="Brasa" style={{ height: 28 }} />
   </div>
 )
 
 const config: DocsThemeConfig = {
   logo: Logo,
   project: {
-    link: 'https://github.com/brasa-finance',
+    link: 'https://github.com/firstset/brasa-docs',
   },
-  docsRepositoryBase: 'https://github.com/brasa-finance/brasa-docs/tree/main',
+  docsRepositoryBase: 'https://github.com/firstset/brasa-docs/tree/main',
   footer: {
     content: (
       <div style={{ width: '100%' }}>

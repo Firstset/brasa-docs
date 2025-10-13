@@ -5,15 +5,18 @@
   --brasa-beige: #f5f1ed;
   --brasa-off-white: #faf8f6;
 
-  /* Accent variations */
-  --brasa-primary-light: #fd7355;
-  --brasa-primary-dark: #e03f1e;
-
   /* Semantic colors */
   --brasa-success: #10b981;
   --brasa-warning: #f59e0b;
   --brasa-danger: #ef4444;
   --brasa-info: #3b82f6;
+}
+
+/* Map Nextra's primary color system to Brasa brand */
+:root {
+  --nextra-primary-hue: 14deg;
+  --nextra-primary-saturation: 100%;
+  --nextra-primary-lightness: 47%;
 }
 
 /* Custom font loading - Inter */
@@ -90,6 +93,13 @@ body {
   background: #6b7280;
 }
 
+/* Keep Nextra primary consistent in dark mode */
+.dark {
+  --nextra-primary-hue: 14deg;
+  --nextra-primary-saturation: 100%;
+  --nextra-primary-lightness: 50%;
+}
+
 /* Code block styling */
 pre {
   border-radius: 8px !important;
@@ -120,4 +130,25 @@ a:hover {
 ::selection {
   background-color: var(--brasa-primary);
   color: white;
+}
+
+/* GitHub link color */
+.nextra-nav-container a[href^="https://github.com"]
+{
+  color: #000000;
+}
+
+/* Sidebar (left) & TOC (right) links default and active colors */
+/*.nextra-sidebar-container a,
+.nextra-toc a {
+  color: var(--brasa-secondary);
+}
+  */
+
+.nextra-sidebar-container a[aria-current='page'],
+.nextra-toc a[aria-current='true'],
+.nextra-toc a[aria-current='page'],
+.nextra-sidebar-container a:hover,
+.nextra-toc a:hover {
+  color: var(--brasa-primary);
 }
