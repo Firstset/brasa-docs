@@ -1,8 +1,6 @@
 import nextra from 'nextra'
 
 const withNextra = nextra({
-  theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.tsx',
   defaultShowCopyCode: true,
   latex: false,
   search: {
@@ -22,6 +20,8 @@ export default withNextra({
   },
   // Disable server-side features for static export
   trailingSlash: true,
+  // Explicitly set the project root for file tracing
+  outputFileTracingRoot: import.meta.dirname,
   // Environment variables
   env: {
     NEXT_PUBLIC_SITE_URL:
