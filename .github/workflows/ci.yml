@@ -107,7 +107,7 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress './out/**/*.html' --base './out' --accept 200,201,202,203,204,206,207,208,226 --exclude-mail
+          args: --verbose --no-progress './out/**/*.html' --base './out' --accept 200,201,202,203,204,206,207,208,226
           fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
