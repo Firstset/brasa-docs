@@ -31,7 +31,9 @@ const Logo = () => (
   </div>
 )
 
-const navbar = <Navbar logo={<Logo />} />
+const navbar = (
+  <Navbar logo={<Logo />} projectLink="https://github.com/firstset/brasa-docs" />
+)
 const footer = <Footer>MIT {new Date().getFullYear()} © Brasa.</Footer>
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
