@@ -25,7 +25,13 @@ export const viewport: Viewport = {
   themeColor: '#FC502C',
 }
 
-const navbar = <Navbar logo={<b>Brasa</b>} />
+const Logo = () => (
+  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+    <img src="/Logo-md-orange.svg" alt="Brasa" style={{ height: 28 }} />
+  </div>
+)
+
+const navbar = <Navbar logo={<Logo />} />
 const footer = <Footer>MIT {new Date().getFullYear()} © Brasa.</Footer>
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
