@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
+import { Inter } from 'next/font/google'
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 
 import 'nextra-theme-docs/style.css'
+
+const inter = Inter({ subsets: ['latin'] })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://docs.brasa.finance'
 
@@ -38,7 +41,7 @@ const footer = <Footer>MIT {new Date().getFullYear()} © Brasa.</Footer>
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
+    <html lang="en" dir="ltr" suppressHydrationWarning className={inter.className}>
       <Head />
       <body>
         <Layout
