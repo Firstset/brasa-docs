@@ -1,7 +1,6 @@
 import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
-import { useRouter } from 'next/router'
-import { Callout, Tabs, Tab, Badge, Steps, Step, ContractAddress } from './components/mdx'
+import type { ComponentProps } from 'react'
+import { LastUpdated, Link, Navbar } from 'nextra-theme-docs'
 
 const Logo = () => (
   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -9,106 +8,77 @@ const Logo = () => (
   </div>
 )
 
-const config: DocsThemeConfig = {
-  logo: Logo,
-  project: {
-    link: 'https://github.com/firstset/brasa-docs',
-  },
+type LayoutProps = ComponentProps<(typeof import('nextra-theme-docs'))['Layout']>
+
+const themeConfig = {
+  navbar: <Navbar logo={<Logo />} projectLink="https://github.com/firstset/brasa-docs" />,
   docsRepositoryBase: 'https://github.com/firstset/brasa-docs/tree/main',
-  footer: {
-    content: (
-      <div style={{ width: '100%' }}>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: '1rem',
-          }}
-        >
-          <div>
-            <p style={{ margin: 0 }}>
-              © {new Date().getFullYear()} Brasa. All rights reserved.
-            </p>
-          </div>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <a
-              href="https://github.com/brasa-finance"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://twitter.com/brasafinance"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a>
-            <a href="https://app.brasa.finance" target="_blank" rel="noopener noreferrer">
-              App
-            </a>
-            <a href="/legal/terms">Terms</a>
-            <a href="/legal/privacy">Privacy</a>
-          </div>
+  footer: (
+    <div style={{ width: '100%' }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '1rem',
+        }}
+      >
+        <div>
+          <p style={{ margin: 0 }}>
+            © {new Date().getFullYear()} Brasa. All rights reserved.
+          </p>
+        </div>
+        <div style={{ display: 'flex', gap: '1.5rem' }}>
+          <Link
+            href="https://github.com/brasa-finance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </Link>
+          <Link
+            href="https://twitter.com/brasafinance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </Link>
+          <Link
+            href="https://app.brasa.finance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            App
+          </Link>
+          <Link href="/legal/terms">Terms</Link>
+          <Link href="/legal/privacy">Privacy</Link>
         </div>
       </div>
-    ),
+    </div>
+  ),
+  feedback: {
+    content: 'Question? Give us feedback →',
+    labels: 'feedback',
   },
-  head: function Head() {
-    const { asPath, defaultLocale, locale } = useRouter()
-    const url =
-      process.env.NEXT_PUBLIC_SITE_URL +
-      (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
-
-    return (
-      <>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:url" content={url} />
-        <meta property="og:type" content="website" />
-        <meta name="theme-color" content="#FC502C" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </>
-    )
+  editLink: 'Edit this page on GitHub →',
+  navigation: {
+    prev: true,
+    next: true,
   },
   sidebar: {
     toggleButton: true,
     defaultMenuCollapseLevel: 1,
   },
   toc: {
-    backToTop: true,
+    backToTop: 'Back to top',
   },
-  navigation: {
-    prev: true,
-    next: true,
-  },
-  editLink: {
-    content: 'Edit this page on GitHub →',
-  },
-  feedback: {
-    content: 'Question? Give us feedback →',
-    labels: 'feedback',
-  },
-  gitTimestamp: ({ timestamp }: { timestamp: Date }) => (
-    <>Last updated on {timestamp.toLocaleDateString()}</>
-  ),
   darkMode: true,
   nextThemes: {
     defaultTheme: 'system',
   },
-  faviconGlyph: '🔥',
-  components: {
-    Callout,
-    Tabs,
-    Tab,
-    Badge,
-    Steps,
-    Step,
-    ContractAddress,
-  },
-} as any
+  lastUpdated: <LastUpdated>Last updated on</LastUpdated>,
+} satisfies Partial<Omit<LayoutProps, 'children' | 'pageMap'>>
 
-export default config
+export default themeConfig
+export { Logo }

@@ -1,15 +1,17 @@
-import { Callout, Tabs, Tab, Badge, Steps, Step, ContractAddress } from './components/mdx'
+import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs'
+import { Callout } from 'nextra/components'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function useMDXComponents(components: any) {
-  return {
+import { Badge, ContractAddress, Steps, Step, Tabs, Tab } from './components/mdx'
+
+export function useMDXComponents(components = {}) {
+  return getThemeComponents({
     ...components,
     Callout,
     Tabs,
     Tab,
-    Badge,
     Steps,
     Step,
+    Badge,
     ContractAddress,
-  }
+  })
 }
