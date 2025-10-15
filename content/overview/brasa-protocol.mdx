@@ -1,0 +1,72 @@
+# Brasa Protocol
+
+## What is Brasa?
+
+Brasa is a liquid staking protocol built on [Fogo](https://www.fogo.io) that
+enables users to stake their FOGO tokens while maintaining liquidity. By staking
+with Brasa, you receive stFOGO tokens that represent your staked position,
+allowing you to:
+
+- **Earn staking rewards** without locking up your assets
+- **Use stFOGO in DeFi** to generate additional yield on top of staking rewards
+- **Maintain liquidity** while your FOGO continues earning rewards
+
+## Liquid Staking
+
+Traditional staking requires you to lock your tokens, making them unavailable
+for other uses. Liquid staking solves this by issuing you a liquid token
+(stFOGO) that represents your staked position. This means you can:
+
+- Trade your staked position on decentralized exchanges
+- Use it as collateral in lending protocols
+- Provide liquidity in DeFi pools
+- Transfer it to other wallets
+
+All while your underlying FOGO continues earning staking rewards.
+
+## Staking Infrastructure
+
+The protocol stakes its FOGO across the Fogo validator set, ensuring your stake
+contributes to the network's security and decentralization.
+
+### Delegation Strategy
+
+Brasa currently employs an equal distribution strategy across all
+well-performing validators in the network. This approach:
+
+- Promotes network decentralization
+- Reduces concentration risk
+- Supports a diverse validator ecosystem
+
+### Reserve Management
+
+To enable instant withdrawals, the protocol maintains a reserve of unstaked
+FOGO:
+
+- **Target**: 1% of total value locked (TVL)
+- **Rebalancing**: Automatically adjusted every epoch
+- **Epoch duration**: Currently 1 hour (subject to change as the network
+  evolves)
+
+The reserve ensures sufficient liquidity for users to instantly withdraw their
+FOGO without waiting for unstaking periods.
+
+## Key Features
+
+### Gasless Staking
+
+Brasa offers a seamless staking experience with gasless transactions, allowing
+you to stake in the most user-friendly way possible while paying no gas fees.
+
+### Dynamic Rebalancing
+
+The protocol automatically distributes stake across zones and validators to
+maintain even balance across the network's economic security, requiring no
+manual intervention from users.
+
+## Team
+
+Brasa is built and operated by [Firstset](https://firstset.xyz), a staking lab
+and early contributor to Fogo. Firstset has been participating as a validator on
+the Fogo network since Genesis, bringing deep expertise in validator operations
+and network security to the protocol.
