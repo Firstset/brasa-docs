@@ -12,13 +12,13 @@ Withdraw directly from the protocol using the pool's reserves:
 - **Speed**: Instant
 - **Slippage**: None - you receive the exact exchange rate
 - **Capacity**: Limited to 1% of total pool value (TVL)
-- **Rebalancing**: Reserves are replenished every epoch to ensure sufficient
-  liquidity
+- **Rebalancing**: Reserves are replenished every Fogo epoch to ensure
+  sufficient liquidity
 - **Best for**: Quick exits when reserve capacity is available
 
 The 1% reserve is carefully maintained to balance instant liquidity with capital
 efficiency. After significant withdrawals, the reserve is automatically refilled
-during the next epoch rebalancing.
+during the next Fogo epoch rebalancing.
 
 ### 2. DEX
 
@@ -45,7 +45,7 @@ sustain protocol operations while keeping costs minimal for users.
 **10%** commission on staking rewards earned by the pool
 
 - Supports protocol development and maintenance
-- Covers validator infrastructure costs
+- Covers operational costs
 - Funds ongoing security audits and improvements
 - You still earn **90%** of all staking rewards
 
@@ -61,14 +61,8 @@ sustain protocol operations while keeping costs minimal for users.
 **0.2%** fee on withdrawals
 
 This small fee serves an important security function. Without it, attackers
-could exploit a timing edge case to extract yield from the pool:
-
-1. Deposit right before rewards are distributed
-2. Immediately withdraw after rewards are claimed
-3. Capture a portion of other users' rewards without staking
-
-The 0.2% withdrawal fee makes this attack economically unviable, protecting the
-pool and its participants. For more technical details, see the
+could exploit an edge case in the canonical SPL Stake Pool design that could
+allow them to extract yield from the pool. For more technical details, see the
 [SPL Stake Pool documentation on fees](https://www.solana-program.com/docs/stake-pool/fees#stake-deposit--withdraw).
 
 ## Summary
